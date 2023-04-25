@@ -1,59 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>My Colorful Website</title>
-	<style>
-		/* Define the styles for the header */
-		header {
-			background-color: #3F51B5; /* Use a blue color for the background */
-			color: #FFFFFF; /* Use white color for the text */
-			padding: 20px;
-		}
-		
-		/* Define the styles for the main content */
-		main {
-			background-color: #FFFFFF; /* Use a white color for the background */
-			color: #000000; /* Use black color for the text */
-			padding: 20px;
-		}
-		
-		/* Define the styles for the links */
-		a {
-			color: #3F51B5; /* Use the same blue color as the header for links */
-			text-decoration: none;
-		}
-		
-		/* Define the styles for the footer */
-		footer {
-			background-color: #000000; /* Use a black color for the background */
-			color: #FFFFFF; /* Use white color for the text */
-			padding: 20px;
-			text-align: center;
-		}
-	</style>
-</head>
-<body>
-	<header>
-		<h1>My Colorful Website</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<main>
-		<h2>My Content</h2>
-		<p>This is some text in my main content area.</p>
-		<a href="#">This is a link</a>
-	</main>
-	
-	<footer>
-		<p>Copyright © 2023 My Name.
-		</p>
-	</footer>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Personal Website</title>
+    <style>
+      /* Add some color to the background and text */
+      body {
+        background-color: #f2f2f2;
+        color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Style the tabs */
+      .tab {
+        display: inline-block;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 5px 10px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+      
+      /* Style the active tab */
+      .active {
+        border-bottom-color: #fff;
+        background-color: #0077cc;
+        color: #fff;
+      }
+      
+      /* Hide the tab content by default */
+      .tabcontent {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #fff;
+      }
+      
+      /* Show the active tab content */
+      .active-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add the tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="openTab(event, 'about')">About</div>
+      <div class="tab" onclick="openTab(event, 'education')">Education</div>
+      <div class="tab" onclick="openTab(event, 'skills')">Skills</div>
+      <div class="tab" onclick="openTab(event, 'projects')">Projects</div>
+    </div>
+    
+    <!-- Add the tab content -->
+    <div class="tabcontent active-content" id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm a college student studying computer science. I'm passionate about programming and always looking for new challenges.</p>
+    </div>
+    <div class="tabcontent" id="education">
+      <h2>Education</h2>
+      <p>I'm currently pursuing a degree in computer science at XYZ University.</p>
+    </div>
+    <div class="tabcontent" id="skills">
+      <h2>Skills</h2>
+      <p>Here are some of my skills:</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div class="tabcontent" id="projects">
+      <h2>Projects</h2>
+      <p>Here are some of my projects:</p>
+      <ul>
+        <li><a href="#">Project 1</a></li>
+        <li><a href="#">Project 2</a></li>
+        <li><a href="#">Project 3</a></li>
+      </ul>
+    </div>
+    
+    <!-- Add the JavaScript to handle the tabs -->
+    <script>
+      function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements
