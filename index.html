@@ -1,96 +1,54 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My Personal Website</title>
-    <style>
-      /* Add some color to the background and text */
-      body {
-        background-color: #f2f2f2;
-        color: #333;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      
-      /* Style the tabs */
-      .tab {
-        display: inline-block;
-        margin-right: 10px;
-        border: 1px solid #ccc;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        padding: 5px 10px;
-        background-color: #fff;
-        cursor: pointer;
-      }
-      
-      /* Style the active tab */
-      .active {
-        border-bottom-color: #fff;
-        background-color: #0077cc;
-        color: #fff;
-      }
-      
-      /* Hide the tab content by default */
-      .tabcontent {
-        display: none;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-top: none;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        background-color: #fff;
-      }
-      
-      /* Show the active tab content */
-      .active-content {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Add the tabs -->
-    <div class="tabs">
-      <div class="tab active" onclick="openTab(event, 'about')">About</div>
-      <div class="tab" onclick="openTab(event, 'education')">Education</div>
-      <div class="tab" onclick="openTab(event, 'skills')">Skills</div>
-      <div class="tab" onclick="openTab(event, 'projects')">Projects</div>
-    </div>
-    
-    <!-- Add the tab content -->
-    <div class="tabcontent active-content" id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm a college student studying computer science. I'm passionate about programming and always looking for new challenges.</p>
-    </div>
-    <div class="tabcontent" id="education">
-      <h2>Education</h2>
-      <p>I'm currently pursuing a degree in computer science at XYZ University.</p>
-    </div>
-    <div class="tabcontent" id="skills">
-      <h2>Skills</h2>
-      <p>Here are some of my skills:</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-      </ul>
-    </div>
-    <div class="tabcontent" id="projects">
-      <h2>Projects</h2>
-      <p>Here are some of my projects:</p>
-      <ul>
-        <li><a href="#">Project 1</a></li>
-        <li><a href="#">Project 2</a></li>
-        <li><a href="#">Project 3</a></li>
-      </ul>
-    </div>
-    
-    <!-- Add the JavaScript to handle the tabs -->
-    <script>
-      function openTab(evt, tabName) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
+    <title>College Student Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>John Doe</h1>
+        <p>Computer Science Student</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I'm a computer science student currently studying at XYZ University. I have a strong passion for programming and I love learning about new technologies. In my free time, I enjoy playing video games and reading books.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
 
-        // Get all elements
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 John Doe</p>
+    </footer>
+</body>
+</html>
